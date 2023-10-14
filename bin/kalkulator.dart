@@ -4,6 +4,7 @@ class Kalkulator {
   var _bil1;
   var _bil2;
   var _pilihan;
+  var hasil;
 
   double setBil1() {
     print("Masukkan Bilangan 1 : ");
@@ -24,5 +25,22 @@ class Kalkulator {
     _pilihan = double.parse(stdin.readLineSync()!);
     print(_pilihan);
     return _pilihan;
+  }
+
+  double hitung() {
+    if (_pilihan == 1) {
+      hasil = _bil1 + _bil2;
+    } else if (_pilihan == 2) {
+      hasil = _bil1 - _bil2;
+    } else if (_pilihan == 3) {
+      hasil = _bil1 * _bil2;
+    } else if (_pilihan == 4) {
+      hasil = _bil1 / _bil2;
+    }
+    return hasil;
+  }
+
+  void getHasil() {
+    print("Hasil Perhitungan = $hasil");
   }
 }
