@@ -1,8 +1,17 @@
 import 'dart:io';
+import 'kalkulator.dart';
 
 void main(List<String> arguments) {
   var kondisi = "Y";
   while (kondisi == "Y") {
+    Kalkulator kal1 = Kalkulator();
+
+    kal1.setBil1();
+    kal1.setBil2();
+    kal1.setPilihan();
+    kal1.hitung();
+    kal1.getHasil();
+
     bool ulang = true;
     while (ulang == true) {
       print("Apakah anda ingin mengulang perhitungan ? [Y/N]");
